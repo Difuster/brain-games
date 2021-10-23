@@ -17,7 +17,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install
         run: |
-          make install
+          make install-deps
         env:
           CI: true  
       - name: Run Linter

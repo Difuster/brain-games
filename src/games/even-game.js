@@ -3,7 +3,7 @@ import { getRandomNum, startGame } from '../index.js';
 const number = getRandomNum();
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const question = `Question: ${number} `;
-const func = () => {
+const getRightAnswer = () => {
   let answer = '';
   if (number % 2 === 0) {
     answer = 'yes';
@@ -12,7 +12,8 @@ const func = () => {
   }
   return answer;
 };
+const rightAnswer = getRightAnswer();
 
 export {
-  startGame, rule, question, func,
+  startGame, rule, question, rightAnswer,
 };

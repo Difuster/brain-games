@@ -28,12 +28,6 @@ const showUserAnswer = (answer) => {
   console.log(`Your answer: ${answer}`);
 };
 
-/* get right answer */
-const getRightAnswer = (func) => {
-  const rightAnswer = func;
-  return rightAnswer;
-};
-
 /* message Correct */
 const msgCorrect = () => {
   console.log('Correct!');
@@ -46,7 +40,7 @@ const msgInCorrect = (userAnswer, rightAnswer) => {
 
 /* GAME */
 
-const startGame = (rule, question, func) => {
+const startGame = (rule, question, rightAnswer) => {
   let result = 0;
   console.log('Welcome to the Brain Games!');
   const userName = getName();
@@ -55,7 +49,6 @@ const startGame = (rule, question, func) => {
   for (let i = 1; i < 4; i += 1) {
     const userAnswer = getQuestion(question);
     showUserAnswer(userAnswer);
-    const rightAnswer = getRightAnswer(func);
     if (userAnswer === rightAnswer) {
       msgCorrect();
       result += 1;

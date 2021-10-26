@@ -2,19 +2,25 @@ import readlineSync from 'readline-sync';
 
 /* get user name */
 const getName = () => {
+  console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   return userName;
+};
+
+/* greet user */
+const greeting = (userName) => {
+  console.log(`Hi ${userName} !`);
+};
+
+/* rules of game */
+const getRules = (rule) => {
+  console.log(rule);
 };
 
 /* random number */
 const getRandomNum = () => {
   const num = Math.floor(Math.random() * 98) + 1;
   return num;
-};
-
-/* rules of game */
-const getRules = (rule) => {
-  console.log(rule);
 };
 
 /* show question and get answer */
@@ -38,30 +44,17 @@ const msgInCorrect = (userAnswer, rightAnswer) => {
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
 };
 
-/* GAME */
-
-const startGame = (rule, question, rightAnswer) => {
-  let result = 0;
-  console.log('Welcome to the Brain Games!');
-  const userName = getName();
-  console.log(`Hi ${userName} !`);
-  getRules(rule);
-  for (let i = 1; i < 4; i += 1) {
-    const userAnswer = getQuestion(question);
-    showUserAnswer(userAnswer);
-    if (userAnswer === rightAnswer) {
-      msgCorrect();
-      result += 1;
-    } else {
-      msgInCorrect(userAnswer, rightAnswer);
-      break;
-    }
-  }
-  if (result === 3) {
-    console.log(`Congratulations, ${userName}!`);
-  } else {
-    console.log(`Let's try again, ${userName}!`);
-  }
+/* message WIN */
+const win = (userName) => {
+  console.log(`Congratulations, ${userName}!`);
 };
 
-export { getRandomNum, startGame };
+/* message LOSE */
+const lose = (userName) => {
+  console.log(`Let's try again, ${userName}!`);
+};
+
+export {
+  getName, greeting, getRules, getRandomNum, getQuestion, showUserAnswer,
+  msgCorrect, msgInCorrect, win, lose,
+};

@@ -13,3 +13,6 @@ https://asciinema.org/a/NbzVxFsVZxvwzt97AYd6eScB0
 
 # ссылка на аскинему gsd-game
 https://asciinema.org/a/lMEPWvy8d0et7leqiPl33oG0O
+
+# ссылка на аскинему progression-game
+https://asciinema.org/a/VEf5k9F7A7oidzDkFF06PCp7X

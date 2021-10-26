@@ -5,5 +5,8 @@
 
 ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 
-# ссылка на аскинему
+# ссылка на аскинему even-game
 https://asciinema.org/a/Heo9sYYUjxnPAhZAqzGLouRXi
+
+# ссылка на аскинему calc-game
+https://asciinema.org/a/NbzVxFsVZxvwzt97AYd6eScB0

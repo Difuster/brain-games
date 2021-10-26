@@ -9,7 +9,7 @@ const getName = () => {
 
 /* greet user */
 const greeting = (userName) => {
-  console.log(`Hi ${userName} !`);
+  console.log(`Hello, ${userName} !`);
 };
 
 /* rules of game */

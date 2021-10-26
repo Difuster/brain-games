@@ -16,3 +16,6 @@ https://asciinema.org/a/lMEPWvy8d0et7leqiPl33oG0O
 
 # ссылка на аскинему progression-game
 https://asciinema.org/a/VEf5k9F7A7oidzDkFF06PCp7X
+
+# ссылка на аскинему prime-game
+https://asciinema.org/a/osu10fpy5JlY7sZHPV6E7LzHa

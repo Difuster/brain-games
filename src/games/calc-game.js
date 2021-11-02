@@ -1,54 +1,26 @@
-import {
-  getName, greeting, getRules, getRandomNum, getQuestion, showUserAnswer,
-  msgCorrect, msgInCorrect, win, lose,
-} from '../index.js';
+import getRandomNum from '../randomNum.js';
 
 /* array with operand */
 const operandArr = ['+', '-', '*'];
 
-/* rules */
+/* rule */
 const rule = 'What is the result of the expression?';
 
 /* get right answer */
-const getRightAnswer = (num1, num2, operand) => {
-  let answer = '';
+const getQuestionAndCorrectAnswer = () => {
+  const a = getRandomNum(100);
+  const b = getRandomNum(100);
+  const operand = operandArr[getRandomNum(3)];
+  const question = `${a} ${operand} ${b}`;
+  let correctAnswer = '';
   if (operand === '+') {
-    answer = num1 + num2;
+    correctAnswer = (a + b).toString();
   } else if (operand === '-') {
-    answer = num1 - num2;
+    correctAnswer = (a - b).toString();
   } else if (operand === '*') {
-    answer = num1 * num2;
+    correctAnswer = (a * b).toString();
   }
-  return answer;
+  return [question, correctAnswer];
 };
 
-/* GAME */
-
-const startGame = () => {
-  let result = 0;
-  const userName = getName();
-  greeting(userName);
-  getRules(rule);
-  for (let i = 1; i < 4; i += 1) {
-    const num1 = getRandomNum();
-    const num2 = getRandomNum();
-    const operand = operandArr[Math.floor(Math.random() * 3)];
-    const rightAnswer = getRightAnswer(num1, num2, operand);
-    const userAnswer = +(getQuestion(`Question: ${num1} ${operand} ${num2} `));
-    showUserAnswer(userAnswer);
-    if (userAnswer === rightAnswer) {
-      msgCorrect();
-      result += 1;
-    } else {
-      msgInCorrect(userAnswer, rightAnswer);
-      break;
-    }
-  }
-  if (result === 3) {
-    win(userName);
-  } else {
-    lose(userName);
-  }
-};
-
-export default startGame;
+export { rule, getQuestionAndCorrectAnswer };

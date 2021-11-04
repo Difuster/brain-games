@@ -6,20 +6,24 @@
 ![example workflow](https://github.com/Difuster/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)
 
 Even-game
-запуск игры: brain-even
+запуск игры: make brain-even  
 [![asciicast](https://asciinema.org/a/444327.svg)](https://asciinema.org/a/444327)
 
-# ссылка на аскинему calc-game
-https://asciinema.org/a/NbzVxFsVZxvwzt97AYd6eScB0
+Calc-game
+запуск игры: make brain-calc  
+[![asciicast](https://asciinema.org/a/444700.svg)](https://asciinema.org/a/444700)
 
-# ссылка на аскинему gsd-game
-https://asciinema.org/a/lMEPWvy8d0et7leqiPl33oG0O
+Gcd-game
+запуск игры: make brain-gcd 
+[![asciicast](https://asciinema.org/a/444717.svg)](https://asciinema.org/a/444717)
 
-# ссылка на аскинему progression-game
-https://asciinema.org/a/VEf5k9F7A7oidzDkFF06PCp7X
+Progression-game
+запуск игры: make brain-progression
+[![asciicast](https://asciinema.org/a/444738.svg)](https://asciinema.org/a/444738)
 
-# ссылка на аскинему prime-game
-https://asciinema.org/a/osu10fpy5JlY7sZHPV6E7LzHa
+Prime-game
+запуск игры: make brain-prime
+[![asciicast](https://asciinema.org/a/444744.svg)](https://asciinema.org/a/444744)
 
 Установка для Linux/WSL 2/MacOS:
 

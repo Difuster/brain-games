@@ -6,22 +6,27 @@
 ![example workflow](https://github.com/Difuster/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)
 
 Even-game
+
 запуск игры: make brain-even  
 [![asciicast](https://asciinema.org/a/444327.svg)](https://asciinema.org/a/444327)
 
 Calc-game
+
 запуск игры: make brain-calc  
 [![asciicast](https://asciinema.org/a/444700.svg)](https://asciinema.org/a/444700)
 
 Gcd-game
+
 запуск игры: make brain-gcd 
 [![asciicast](https://asciinema.org/a/444717.svg)](https://asciinema.org/a/444717)
 
 Progression-game
+
 запуск игры: make brain-progression
 [![asciicast](https://asciinema.org/a/444738.svg)](https://asciinema.org/a/444738)
 
 Prime-game
+
 запуск игры: make brain-prime
 [![asciicast](https://asciinema.org/a/444744.svg)](https://asciinema.org/a/444744)
 

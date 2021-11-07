@@ -22,7 +22,7 @@ const getQuestionAndCorrectAnswer = () => {
   const progression = generateProgression(startProgres, progresStep, progresLength);
   const index = getRandomNum(progresLength);
   const correctAnswer = progression[index].toString();
-  progression[index] = ' ';
+  progression[index] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };

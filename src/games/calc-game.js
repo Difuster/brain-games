@@ -6,20 +6,26 @@ const operandArr = ['+', '-', '*'];
 /* rule */
 const rule = 'What is the result of the expression?';
 
+/* calc */
+const calc = (a, b, operand) => {
+  let result = '';
+  if (operand === '+') {
+    result = (a + b).toString();
+  } else if (operand === '-') {
+    result = (a - b).toString();
+  } else if (operand === '*') {
+    result = (a * b).toString();
+  }
+  return result;
+};
+
 /* get right answer */
 const getQuestionAndCorrectAnswer = () => {
   const a = getRandomNum(100);
   const b = getRandomNum(100);
   const operand = operandArr[getRandomNum(3)];
   const question = `${a} ${operand} ${b}`;
-  let correctAnswer = '';
-  if (operand === '+') {
-    correctAnswer = (a + b).toString();
-  } else if (operand === '-') {
-    correctAnswer = (a - b).toString();
-  } else if (operand === '*') {
-    correctAnswer = (a * b).toString();
-  }
+  const correctAnswer = calc(a, b, operand);
   return [question, correctAnswer];
 };
 

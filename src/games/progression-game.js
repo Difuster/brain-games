@@ -3,37 +3,27 @@ import getRandomNum from '../randomNum.js';
 /* rule */
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+/* generate progressions */
+const generateProgression = (startProgres, progresStep, progresLength) => {
+  const progressionArray = [];
+  let elemOfProgres = startProgres;
+  progressionArray.push(elemOfProgres);
+  for (let i = 0; i < progresLength; i += 1) {
+    elemOfProgres += progresStep;
+    progressionArray.push(elemOfProgres);
+  }
+  return progressionArray;
+};
+
 const getQuestionAndCorrectAnswer = () => {
-  const num = getRandomNum(10);
-  const d = Math.floor(Math.random() * 8) + 2;
-  const length = Math.floor(Math.random() * 6) + 5;
-  /* get array with nums */
-  const getNumsArr = (number, a, lengthOfProgres) => {
-    let x = number;
-    const arr = [];
-    arr.push(number);
-    for (let i = 1; i < lengthOfProgres; i += 1) {
-      arr.push(x += a);
-    }
-    return arr;
-  };
-  /* get string with x */
-  const getArithProgres = (x, arr) => {
-    const array = arr;
-    array[x] = '..';
-    const str = arr.join(' ');
-    return str;
-  };
-  /* get right answer */
-  const getRightAnswer = (x, arr) => {
-    let answer = 0;
-    answer = arr[x];
-    return answer;
-  };
-  const numsArr = getNumsArr(num, d, length);
-  const x = Math.floor(Math.random() * numsArr.length);
-  const correctAnswer = (getRightAnswer(x, numsArr)).toString();
-  const question = getArithProgres(x, numsArr);
+  const startProgres = getRandomNum(9) + 1;
+  const progresStep = getRandomNum(8) + 2;
+  const progresLength = getRandomNum(5) + 4;
+  const progression = generateProgression(startProgres, progresStep, progresLength);
+  const index = getRandomNum(progresLength);
+  const correctAnswer = progression[index].toString();
+  progression[index] = ' ';
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
 

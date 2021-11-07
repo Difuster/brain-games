@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 /* GAME */
 
-const startGame = (rule, func) => {
+const startGame = (rule, getRoundData) => {
   // rounds
   const rounds = 3;
   // greeting
@@ -12,18 +12,16 @@ const startGame = (rule, func) => {
   // rules
   console.log(rule);
   for (let i = 1; i <= rounds; i += 1) {
-    const roundData = func();
+    const roundData = getRoundData();
     // get player answer
     const userAnswer = readlineSync.question(`Question: ${roundData[0]} `);
-    if (userAnswer === roundData[1]) {
-      console.log('Correct!');
-    } else {
+    if (userAnswer !== roundData[1]) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${roundData[1]}'`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
+      return console.log(`Let's try again, ${userName}!`);
     }
-    console.log(`Congratulations, ${userName}!`);
+    console.log('Correct!');
   }
+  return console.log(`Congratulations, ${userName}!`);
 };
 
 export default startGame;

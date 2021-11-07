@@ -1,7 +1,7 @@
 import getRandomNum from '../randomNum.js';
 
 /* rule */
-const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+const rule = 'What number is missing in the progression?';
 
 /* generate progressions */
 const generateProgression = (startProgres, progresStep, progresLength) => {
@@ -18,7 +18,7 @@ const generateProgression = (startProgres, progresStep, progresLength) => {
 const getQuestionAndCorrectAnswer = () => {
   const startProgres = getRandomNum(9) + 1;
   const progresStep = getRandomNum(8) + 2;
-  const progresLength = getRandomNum(5) + 4;
+  const progresLength = getRandomNum(5) + 5;
   const progression = generateProgression(startProgres, progresStep, progresLength);
   const index = getRandomNum(progresLength);
   const correctAnswer = progression[index].toString();

@@ -5,25 +5,25 @@ const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 /* isPrime */
 const isPrime = (num) => {
-  let result = '';
+  if (num < 2) {
+    return false;
+  }
   let i = 2;
   while (i < num) {
     if (num % i === 0) {
-      result = 'no';
-      break;
-    } else {
-      result = 'yes';
-      i += 1;
+      return false;
     }
+    i += 1;
   }
-  return result;
+  return true;
 };
 
 /* get right answer */
 const getQuestionAndCorrectAnswer = () => {
   const num = getRandomNum(99) + 1;
   const question = num;
-  const correctAnswer = isPrime(num);
+  const isPrimeNum = isPrime(num);
+  const correctAnswer = isPrimeNum ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 

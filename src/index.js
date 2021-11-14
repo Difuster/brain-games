@@ -12,11 +12,11 @@ const startGame = (rule, getRoundData) => {
   // rules
   console.log(rule);
   for (let i = 1; i <= rounds; i += 1) {
-    const roundData = getRoundData();
+    const [questionNum, correctAnswer] = getRoundData();
     // get player answer
-    const userAnswer = readlineSync.question(`Question: ${roundData[0]} `);
-    if (userAnswer !== roundData[1]) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${roundData[1]}'`);
+    const userAnswer = readlineSync.question(`Question: ${questionNum} `);
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       return console.log(`Let's try again, ${userName}!`);
     }
     console.log('Correct!');

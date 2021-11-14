@@ -10,11 +10,11 @@ const rule = 'What is the result of the expression?';
 const calc = (a, b, operand) => {
   let result = '';
   if (operand === '+') {
-    result = (a + b).toString();
+    result = (a + b);
   } else if (operand === '-') {
-    result = (a - b).toString();
+    result = (a - b);
   } else if (operand === '*') {
-    result = (a * b).toString();
+    result = (a * b);
   }
   return result;
 };
@@ -25,7 +25,7 @@ const getQuestionAndCorrectAnswer = () => {
   const b = getRandomNum(100);
   const operand = operandArr[getRandomNum(3)];
   const question = `${a} ${operand} ${b}`;
-  const correctAnswer = calc(a, b, operand);
+  const correctAnswer = (calc(a, b, operand)).toString();
   return [question, correctAnswer];
 };
 

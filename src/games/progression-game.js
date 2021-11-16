@@ -16,9 +16,9 @@ const generateProgression = (startProgres, progresStep, progresLength) => {
 };
 
 const getQuestionAndCorrectAnswer = () => {
-  const startProgres = getRandomNum(9) + 1;
-  const progresStep = getRandomNum(8) + 2;
-  const progresLength = getRandomNum(5) + 5;
+  const startProgres = getRandomNum(1, 10);
+  const progresStep = getRandomNum(2, 9);
+  const progresLength = getRandomNum(5, 10);
   const progression = generateProgression(startProgres, progresStep, progresLength);
   const index = getRandomNum(progresLength);
   const correctAnswer = progression[index].toString();

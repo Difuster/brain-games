@@ -20,8 +20,8 @@ const getGCD = (num1, num2) => {
 
 /* get right answer */
 const getQuestionAndCorrectAnswer = () => {
-  const num1 = getRandomNum(100);
-  const num2 = getRandomNum(100);
+  const num1 = getRandomNum(0, 100);
+  const num2 = getRandomNum(0, 100);
   const question = `${num1} ${num2} `;
   const correctAnswer = (getGCD(num1, num2)).toString();
   return [question, correctAnswer];

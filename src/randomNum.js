@@ -1,7 +1,6 @@
 /* random number */
-const getRandomNum = (x) => {
-  const num = Math.floor(Math.random() * x);
-  return num;
+const getRandomNum = (min = 0, max = 100) => {
+  return Math.random() * (max - min) + min;
 };
 
 export default getRandomNum;

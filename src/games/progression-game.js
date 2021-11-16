@@ -5,14 +5,14 @@ const rule = 'What number is missing in the progression?';
 
 /* generate progressions */
 const generateProgression = (startProgres, progresStep, progresLength) => {
-  const progressionArray = [];
+  const progression = [];
   let elemOfProgres = startProgres;
-  progressionArray.push(elemOfProgres);
+  progression.push(elemOfProgres);
   for (let i = 0; i < progresLength; i += 1) {
     elemOfProgres += progresStep;
-    progressionArray.push(elemOfProgres);
+    progression.push(elemOfProgres);
   }
-  return progressionArray;
+  return progression;
 };
 
 const getQuestionAndCorrectAnswer = () => {

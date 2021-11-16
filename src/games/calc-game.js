@@ -1,19 +1,19 @@
 import getRandomNum from '../randomNum.js';
 
-/* array with operand */
-const operandArr = ['+', '-', '*'];
+/* array with operator */
+const operators = ['+', '-', '*'];
 
 /* rule */
 const rule = 'What is the result of the expression?';
 
 /* calc */
-const calc = (a, b, operand) => {
+const calc = (a, b, operator) => {
   let result;
-  if (operand === '+') {
+  if (operator === '+') {
     result = (a + b);
-  } else if (operand === '-') {
+  } else if (operator === '-') {
     result = (a - b);
-  } else if (operand === '*') {
+  } else if (operator === '*') {
     result = (a * b);
   }
   return result;
@@ -23,9 +23,9 @@ const calc = (a, b, operand) => {
 const getQuestionAndCorrectAnswer = () => {
   const a = getRandomNum(0, 100);
   const b = getRandomNum(0, 100);
-  const operand = operandArr[getRandomNum(0, operandArr.length)];
-  const question = `${a} ${operand} ${b}`;
-  const correctAnswer = (calc(a, b, operand)).toString();
+  const operator = operators[getRandomNum(0, operators.length)];
+  const question = `${a} ${operator} ${b}`;
+  const correctAnswer = (calc(a, b, operator)).toString();
   return [question, correctAnswer];
 };
 

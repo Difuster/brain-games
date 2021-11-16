@@ -5,7 +5,6 @@ const rule = 'Find the greatest common divisor of given numbers.';
 
 /* get gcd */
 const getGCD = (num1, num2) => {
-  let result = '';
   let t = 0;
   let a = num1;
   let b = num2;
@@ -14,7 +13,7 @@ const getGCD = (num1, num2) => {
     b = a % b;
     a = t;
   }
-  result = t;
+  const result = t;
   return result;
 };
 

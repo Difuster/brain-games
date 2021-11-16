@@ -8,7 +8,7 @@ const rule = 'What is the result of the expression?';
 
 /* calc */
 const calc = (a, b, operand) => {
-  let result = '';
+  let result;
   if (operand === '+') {
     result = (a + b);
   } else if (operand === '-') {

@@ -23,7 +23,7 @@ const calc = (a, b, operand) => {
 const getQuestionAndCorrectAnswer = () => {
   const a = getRandomNum(0, 100);
   const b = getRandomNum(0, 100);
-  const operand = operandArr[getRandomNum(3)];
+  const operand = operandArr[getRandomNum(0, operandArr.length)];
   const question = `${a} ${operand} ${b}`;
   const correctAnswer = (calc(a, b, operand)).toString();
   return [question, correctAnswer];

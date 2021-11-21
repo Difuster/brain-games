@@ -1,9 +1,7 @@
 import getRandomNum from '../randomNum.js';
 
-/* rule */
 const rule = 'What number is missing in the progression?';
 
-/* generate progressions */
 const generateProgression = (startProgres, progresStep, progresLength) => {
   const progression = [];
   for (let i = 0; i < progresLength; i += 1) {

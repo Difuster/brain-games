@@ -1,9 +1,7 @@
 import getRandomNum from '../randomNum.js';
 
-/* rule */
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-/* isPrime */
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -18,7 +16,6 @@ const isPrime = (num) => {
   return true;
 };
 
-/* get right answer */
 const getQuestionAndCorrectAnswer = () => {
   const num = getRandomNum(0, 100);
   const question = num;

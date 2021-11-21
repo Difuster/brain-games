@@ -1,6 +1,5 @@
 import getRandomNum from '../randomNum.js';
 
-/* rule */
 const rule = 'Find the greatest common divisor of given numbers.';
 
 /* get gcd */
@@ -17,7 +16,6 @@ const getGCD = (num1, num2) => {
   return result;
 };
 
-/* get right answer */
 const getQuestionAndCorrectAnswer = () => {
   const num1 = getRandomNum(1, 100);
   const num2 = getRandomNum(1, 100);

@@ -1,12 +1,9 @@
 import getRandomNum from '../randomNum.js';
 
-/* array with operator */
 const operators = ['+', '-', '*'];
 
-/* rule */
 const rule = 'What is the result of the expression?';
 
-/* calc */
 const calc = (a, b, operator) => {
   let result;
   if (operator === '+') {
@@ -19,7 +16,6 @@ const calc = (a, b, operator) => {
   return result;
 };
 
-/* get right answer */
 const getQuestionAndCorrectAnswer = () => {
   const a = getRandomNum(0, 100);
   const b = getRandomNum(0, 100);
